@@ -1,0 +1,406 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta lang="es">
+    <title>Modelo Stable Diffusion y la generación de imágenes con modelos de difusión</title>
+
+    <!-- Asociar hoja de estilos de página -->
+    <link rel="stylesheet" href="../styles/style.css" type="text/css">
+
+    <!-- Asociar logo a la página -->
+    <link rel="shortcut icon" href="images/logo.png" />
+</head>
+
+<body>
+    <!-- Encabezado de nombre de página -->
+    <div class="contenedorEncabezado" id="inicio">
+        <a href="../index.html" target="_self">
+            <img class="imagenLogo" alt="IA logo" src="../images/logo.png">
+        </a>
+        <h1 class="textoTitulo">
+            <a href="../index.html" target="_self">
+                Generación de imágenes con modelos de difusión
+            </a>
+        </h1>
+    </div>
+
+    <!-- contenedor padre para menú de navegación y contenido -->
+    <div class="contenedorMaestro">
+
+        <input type="checkbox" id="expandirMenu">
+        <label id="expandirMenuEtiqueta" for="expandirMenu">
+            <img class="expandir" src="../images/Arriba.png">
+            <img class="contraer" src="../images/Abajo.png">
+        </label>
+
+        <ul class="navegacion">
+            <li class="itemVolver">
+                <a href="#inicio" target="_self">
+                    <button>
+                        <img src="../images/Volver.png">
+                        <p>Volver arriba</p>
+                    </button>
+                </a>
+            </li>
+            <li>
+                <ul>
+                    <li>
+                        <a href="../index.html#modelosDifusion" target="_self">
+                            <button>
+                                Modelos de difusión
+                            </button>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../index.html#conceptosTecnicos" target="_self">
+                            <button>
+                                Conceptos Teóricos
+                            </button>
+                        </a>
+                    </li>
+                    <li>
+                    <a href="../index.html#componentes" target="_self">
+                        <button>
+                            Componentes
+                        </button>
+                    </a>
+                    </li>
+                </ul>
+                <a  href="../index.html" target="_self">
+                    <button>
+                        <img src="../images/Home.png">
+                        <p>Introducción</p>
+                    </button>
+                </a>
+            </li>
+            <li>
+                <ul>
+                    <li>
+                    <a href="desarrollo.html#contribucion" target="_self">
+                        <button>
+                            Contribución mundial a IA
+                        </button>
+                    </a>
+                        </li>
+                    <li>
+                    <a href="desarrollo.html#equipos" target="_self">
+                        <button>
+                            Equipos Importantes
+                        </button>
+                    </a>
+                        </li>
+                </ul>
+                <a href="desarrollo.html" target="_self">
+                    <button>
+                        <img src="../images/Tools.png">
+                        <p>Desarollo</p>
+                    </button>
+                </a>
+
+            </li>
+            <li>
+                <ul>
+                    <li>
+                    <a href="historia.html#antecedentes" target="_self">
+                        <button>
+                            Antecedentes Históricos
+                        </button>
+                    </a>
+                        </li>
+                    <li>
+                    <a href="historia.html#moderno" target="_self">
+                        <button>
+                            Desarrollo en la Era Moderna
+                        </button>
+                    </a>
+                        </li>
+                    <li>
+                    <a href="historia.html#futuro" target="_self">
+                        <button>
+                            Futuro y desarrollos actuales
+                        </button>
+                    </a>
+                        </li>
+                </ul>
+                <a href="historia.html" target="_self">
+                    <button>
+                        <img src="../images/Paper.png">
+                        <p>Historia</p>
+                    </button>
+                </a>
+            </li>
+            <li>
+                <ul>
+                    <li>
+                    <a href="aplicaciones.html#ejemplos" target="_self">
+                        <button>
+                            Ejemplos de uso
+                        </button>
+                    </a>
+                        </li>
+                </ul>
+                <a href="aplicaciones.html" target="_self">
+                    <button>
+                        <img src="../images/Activity.png">
+                        <p>Aplicaciones</p>
+                    </button>
+                </a>
+
+            </li>
+            <li>
+                <a href="personajes.html" target="_self">
+                    <button>
+                        <img src="../images/People.png">
+                        <p>Personajes</p>
+                    </button>
+                </a>
+            </li>
+            <li>
+                <ul>
+                    <li>
+                        <a href="referencias.html#imagenes" target="_self">
+                            <button>
+                                Imágenes
+                            </button>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="referencias.html#referencias" target="_self">
+                            <button>
+                                Referencias
+                            </button>
+                        </a>
+                    </li>
+                </ul>
+                <a href="referencias.html" target="_self">
+                    <button>
+                        <img src="../images/Credits.png">
+                        <p>Créditos</p>
+                    </button>
+                </a>
+            </li>
+        </ul>
+
+        <!-- contenido principal -->
+        <div class="contenedorContenido">
+            <h1 class="textoTituloContenido">
+                Historia
+            </h1>
+
+            <div class="contenedorSeparador"></div>
+            <p class="textoContenido">
+                La llegada del <b>conjunto de algoritmos</b> que definen a los modelos de difusión fueron ampliamente influenciados por avances previos, tanto
+                en el campo de la Inteligencia Artificial como la simulación de capacidades humanas a través de una
+                máquina. <br>
+                Es importante estudiar el <b>impacto de tecnologías previas</b> para entender el surgimiento de éste tipo de
+                modelos, así como realizar una proyección a futuro de los resultados de <b>avances actualmente en desarrollo</b>.
+            </p>
+            <div id="antecedentes">
+                <h1 class="textoSubtituloContenido">
+                    Antecedentes Históricos
+                </h1>
+                
+                <div class="contenedorCentrado">
+                    <img src="../images/AncientGreece.jpg" alt="Antigua Grecia" class="imgAspecto bordeSombra">
+                </div>
+                
+                <div class="tablaGeneral">
+                    <div>
+                        <div>
+                            <p class="textoPildora">Antigua Grecia</p>
+                        </div>
+                        <div>
+                            <p class="textoContenido">
+                                En la Antigua Grecia la inteligencia artificial era contemplada desde la creación de los
+                                primeros
+                                <b>autómatas</b> gracias a inventores como <b>Daedalus</b> y el <b>Heroe de Alexandría</b>, principalmente se
+                                estudiaba
+                                la
+                                capacidad generadora de las máquinas, como la <b>reproducción de sonidos</b> y eventualmente
+                                música.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                    
+            </div>
+            
+            <div id="moderno">
+                <h1 class="textoSubtituloContenido">
+                    Desarrollo en la Era Moderna
+                </h1>
+                
+                <div class="contenedorCentrado">
+                    <img src="../images/Modernity.jpg" alt="Antigua Grecia" class="imgAspecto bordeSombra">
+                </div>
+                
+                <div class="tablaGeneral">
+                    <div>
+                        <div>
+                            <p class="textoPildora">1906</p>
+                        </div>
+                        <div>
+                            <p class="textoContenido">
+                                En 1906 el matemático <b>Andrey Markov</b> publicó su primer paper relacionado con las cadenas
+                                de Markov, un concepto ampliamente usado en el procesamiento de lenguaje natural. <br>
+                                Uno de los papers más importantes de este autor describía el proceso por el cuál se
+                                aprende una <b>cadena de Markov</b> para el texto de la novela Eugeny Onegin, siendo así
+                                posible generar nuevo contenido con un estilo de prosa muy aproximado al del autor
+                                original.
+                            </p>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <p class="textoPildora">1950</p>
+                        </div>
+                        <div>
+                            <p class="textoContenido">
+                                En 1950, <b>Alan Turing</b> describió por primera vez los interrogantes relacionados a la
+                                capacidad
+                                de
+                                la
+                                inteligencia artificial y su relación con la inteligencia humana en el paper <b>"Computing
+                                Machine
+                                and
+                                Intelligence"</b>
+                            </p>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <p class="textoPildora">1956</p>
+                        </div>
+                        <div>
+                            <p class="textoContenido">
+                                En 1956 se establece la inteligencia artificial como una disciplina en el <b>Darthmouth
+                                College</b>,
+                                iniciando
+                                así un periodo de continuo desarrollo en el campo.
+                            </p>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <p class="textoPildora">1970s</p>
+                        </div>
+                        <div>
+                            <p class="textoContenido">
+                                En los 70s, <b>Harold Cohen</b> creó y exhibió algunas pinturas generados por la inteligencia
+                                artificial
+                                <b>AARON</b>.
+                                Ésta fue la primera vez en la que se habló de la generacion de imágenes por Inteligencia
+                                Artificial.
+                            </p>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <p class="textoPildora">2000</p>
+                        </div>
+                        <div>
+                            <p class="textoContenido">
+                                En los 2000 surgieron conceptos como el deep learning aplicado a la <b>clasificación de
+                                imagenes</b>,
+                                el
+                                reconocimiento de texto y el procesamiento de lengaje natural, entre otras tareas.
+                            </p>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <p class="textoPildora">2014</p>
+                        </div>
+                        <div>
+                            <p class="textoContenido">
+                                En 2014 surge uno de los conceptos más importantes para modelos posteriores, entre ellos
+                                el auto-codificador variacional (o variational autoencoder). Por
+                                primera vez se contemplaba la idea de la <b>codificación de una entrada</b> en un vector
+                                latente modelado por una distribución de probabilidad capaz de albergar más información
+                                de una manera más generalizable. En éste mismo año surgen las <b>redes neuronales
+                                adversarias</b>, uno lo de los principales modelos generativos aún vigentes bajo ciertos
+                                contextos.
+                            </p>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <p class="textoPildora">2017</p>
+                        </div>
+                        <div>
+                            <p class="textoContenido">
+
+                                En 2017 surge el modelo <b>Transformador</b>, una de las principales herramientas que permiten
+                                la
+                                interpretación y captación semántica de texto en general, introduciendo así el concepto
+                                de
+                                prompt
+                                como
+                                una entrada bajo la custodia del usuario
+                            </p>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <p class="textoPildora">2021</p>
+                        </div>
+                        <div>
+                            <p class="textoContenido">
+                                En 2021 el modelo DALL-E fue lanzado. Este punto marcó el surgimiento de modelos
+                                posteriores
+                                como
+                                Midjourney y Stable Diffusion, todos éstos capaces de generar imágenes a partir de
+                                prompts de
+                                texto
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="futuro">
+                <h1 class="textoSubtituloContenido">
+                    Futuro y desarrollos actuales
+                </h1>
+                
+                <div class="contenedorCentrado">
+                    <img src="../images/Future.jpg" alt="Antigua Grecia" class="imgAspecto bordeSombra">
+                </div>
+                
+                <div class="tablaGeneral">
+                    <div>
+                        <div>
+                            <p class="textoPildora">2023</p>
+                        </div>
+                        <div>
+                            <p class="textoContenido">
+                                En marzo de 2023 es lanzado <b>GPT-4</b>, probablemente la más avanzada aproximación a un
+                                Sistema
+                                de
+                                inteligencia artificial completo capaz de trabajar sobre multimedia más alla del texto y
+                                las
+                                imágenes.
+                            </p>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <p class="textoPildora">Visión a futuro</p>
+                        </div>
+                        <div>
+                            <p class="textoContenido">
+                                Aún la Inteligencia Artificial Generativa en general no ha alcanzado su potencial límite. Instituciones con reputación a nivel mundial, como el <b>MIT</b>, <b>Carnegie Mellon</b> y <b>Technion</b>, han iniciado el desarrollo de propuestas que buscan aplicar la Inteligencia Artificial a contextos aún no considerados, entre ellos la <b>agricultura y ganadería</b>, y el <b>cuidado de pacientes y personas mayores</b>. Es relevante resaltar que ciertas aplicaciones requieren de un alto índice de creatividad encaminado a la resolución de problemas de manera innovadora y efectiva.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

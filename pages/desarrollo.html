@@ -1,0 +1,250 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta lang="es">
+    <title>Modelo Stable Diffusion y la generación de imágenes con modelos de difusión</title>
+
+    <!-- Asociar hoja de estilos de página -->
+    <link rel="stylesheet" href="../styles/style.css" type="text/css">
+
+    <!-- Asociar logo a la página -->
+    <link rel="shortcut icon" href="images/logo.png" />
+</head>
+
+<body>
+    <!-- Encabezado de nombre de página -->
+    <div class="contenedorEncabezado" id="inicio">
+        <a href="../index.html" target="_self">
+            <img class="imagenLogo" alt="IA logo" src="../images/logo.png">
+        </a>
+        <h1 class="textoTitulo">
+            <a href="../index.html" target="_self">
+                Generación de imágenes con modelos de difusión
+            </a>
+        </h1>
+    </div>
+
+    <!-- contenedor padre para menú de navegación y contenido -->
+    <div class="contenedorMaestro">
+
+        <input type="checkbox" id="expandirMenu">
+        <label id="expandirMenuEtiqueta" for="expandirMenu">
+            <img class="expandir" src="../images/Arriba.png">
+            <img class="contraer" src="../images/Abajo.png">
+        </label>
+
+        <ul class="navegacion">
+            <li class="itemVolver">
+                <a href="#inicio" target="_self">
+                    <button>
+                        <img src="../images/Volver.png">
+                        <p>Volver arriba</p>
+                    </button>
+                </a>
+            </li>
+            <li>
+                <ul>
+                    <li>
+                        <a href="../index.html#modelosDifusion" target="_self">
+                            <button>
+                                Modelos de difusión
+                            </button>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../index.html#conceptosTecnicos" target="_self">
+                            <button>
+                                Conceptos Teóricos
+                            </button>
+                        </a>
+                    </li>
+                    <li>
+                    <a href="../index.html#componentes" target="_self">
+                        <button>
+                            Componentes
+                        </button>
+                    </a>
+                    </li>
+                </ul>
+                <a  href="../index.html" target="_self">
+                    <button>
+                        <img src="../images/Home.png">
+                        <p>Introducción</p>
+                    </button>
+                </a>
+            </li>
+            <li>
+                <ul>
+                    <li>
+                    <a href="desarrollo.html#contribucion" target="_self">
+                        <button>
+                            Contribución mundial a IA
+                        </button>
+                    </a>
+                        </li>
+                    <li>
+                    <a href="desarrollo.html#equipos" target="_self">
+                        <button>
+                            Equipos Importantes
+                        </button>
+                    </a>
+                        </li>
+                </ul>
+                <a href="desarrollo.html" target="_self">
+                    <button>
+                        <img src="../images/Tools.png">
+                        <p>Desarollo</p>
+                    </button>
+                </a>
+
+            </li>
+            <li>
+                <ul>
+                    <li>
+                    <a href="historia.html#antecedentes" target="_self">
+                        <button>
+                            Antecedentes Históricos
+                        </button>
+                    </a>
+                        </li>
+                    <li>
+                    <a href="historia.html#moderno" target="_self">
+                        <button>
+                            Desarrollo en la Era Moderna
+                        </button>
+                    </a>
+                        </li>
+                    <li>
+                    <a href="historia.html#futuro" target="_self">
+                        <button>
+                            Futuro y desarrollos actuales
+                        </button>
+                    </a>
+                        </li>
+                </ul>
+                <a href="historia.html" target="_self">
+                    <button>
+                        <img src="../images/Paper.png">
+                        <p>Historia</p>
+                    </button>
+                </a>
+            </li>
+            <li>
+                <ul>
+                    <li>
+                    <a href="aplicaciones.html#ejemplos" target="_self">
+                        <button>
+                            Ejemplos de uso
+                        </button>
+                    </a>
+                        </li>
+                </ul>
+                <a href="aplicaciones.html" target="_self">
+                    <button>
+                        <img src="../images/Activity.png">
+                        <p>Aplicaciones</p>
+                    </button>
+                </a>
+
+            </li>
+            <li>
+                <a href="personajes.html" target="_self">
+                    <button>
+                        <img src="../images/People.png">
+                        <p>Personajes</p>
+                    </button>
+                </a>
+            </li>
+            <li>
+                <ul>
+                    <li>
+                        <a href="referencias.html#imagenes" target="_self">
+                            <button>
+                                Imágenes
+                            </button>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="referencias.html#referencias" target="_self">
+                            <button>
+                                Referencias
+                            </button>
+                        </a>
+                    </li>
+                </ul>
+                <a href="referencias.html" target="_self">
+                    <button>
+                        <img src="../images/Credits.png">
+                        <p>Créditos</p>
+                    </button>
+                </a>
+            </li>
+        </ul>
+
+        <!-- contenido principal -->
+        <div class="contenedorContenido">
+            <h1 class="textoTituloContenido">
+                Desarrollo
+            </h1>
+            <div class="contenedorSeparador"></div>
+            <p class="textoContenido">
+                El Siglo XXI representa el llamado <b>boom de la IA</b>. Dada la complejidad y recursos requeridos para la implementación de modelos de aprendizaje de máquina suelen requerirse <b>cantidades significativas de recursos computacionales</b> y grandes cantidades de <b>datos de entrenamiento, prueba y validación</b>. Es por esto que usualmente los grandes avances en el campo relacionan a corporaciones o equipos en lugar de personas individuales.
+            </p>
+            
+            <div id="contribucion">
+                <h1 class="textoSubtituloContenido">
+                    Contribución mundial a IA
+                </h1>
+                
+                <p class="textoContenido">
+                    Gracias al aporte, principalmente investigativo, de diversas <b>corporaciones</b> alrededor del mundo, varios modelos de inteligencia artificial, entre ellos aquellos que buscan generar imágenes a partir de otros tipos de multimedia, han surgido como <b>herramientas útiles</b> dentro de contextos diversos.
+                </p>
+                
+                <!-- Presentación de elementos aislados finales, entre ellos mapa de investigación -->
+                <div class="contenedorCentrado">
+                    <img src="../images/MapaInvestigacion.png" alt="Mapa de países con más investigación"
+                        class="imgAspecto bordeSombra">
+                </div>
+                <p class="textoContenido">
+                    Así mismo, más allá de la investigación, es importante entender de manera general el interés de los
+                    países en la <b>Inteligencia Artificial Generativa</b>; se recomienda visitar
+                    <a href="https://www.visualcapitalist.com/cp/mapped-interest-in-generative-ai-by-country/">
+                        éste enlace.</a>
+                </p>
+            </div>
+            <div id="equipos">
+                <h1 class="textoSubtituloContenido">
+                    Equipos importantes
+                </h1>
+                <p class="textoContenido">
+                    El desarrollo de <b>Stable Diffusion</b> involucró la participación de la <b>academia</b> desde diversas partes del
+                    mundo, sin embargo, resalta la participación de los investigadores de <b>CompVis Group de la Universidad de
+                    Múnich</b>, así como de <b>Runway</b>, una organización con sede principal en Nueva York, Estados Unidos. 
+                </p>
+
+                <!-- Lista de logos de compañías mencionadas -->
+                <div class="contenedorResponsivo">
+                    <img src="../images/CompVisLogo.png" alt="Logo CompVis" class="imagenGeneral">
+                    <img src="../images/UDeMunichLogo.svg" alt="Logo Universidad de Múnich" class="imagenGeneral">
+                    <img src="../images/RunwayLogo.svg" alt="Logo Runway" class="imagenGeneral">
+                </div>
+                
+                <div class="contenedorResponsivo">
+                    <p class="textoContenido">
+                        <b>OpenAI</b> representa uno de los grandes aportantes a nivel organizacional a la Inteligencia Artificial Generativa. Sus aportes son encabezados por la creación de <b>ChatGPT</b>, una herramienta ampliamente conocida por revolucionar los asistentes virtuales multipropósito con un chatbot capaz de actuar bajo diversos contextos y con la capacidad de generar respuestas coherentes y limitadamente precisas. Por otra parte, OpenAI ha participado ampliamente en la implementación y popularización de <b>DALL-E</b> como herramienta para generar y alterar imágenes con alta precisión.
+                    </p>
+                    
+                    <img src="../images/OpenAI.png" alt="Logo OpenAI"
+                            class="imagenGeneral imagenParrafoDerecha">
+                </div>
+                
+            </div>            
+        </div>
+    </div>
+
+</body>
+
+</html>

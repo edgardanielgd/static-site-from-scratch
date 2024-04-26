@@ -1,0 +1,292 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta lang="es">
+    <title>Modelo Stable Diffusion y la generación de imágenes con modelos de difusión</title>
+
+    <!-- Asociar hoja de estilos de página -->
+    <link rel="stylesheet" href="../styles/style.css" type="text/css">
+
+    <!-- Asociar logo a la página -->
+    <link rel="shortcut icon" href="images/logo.png" />
+</head>
+
+<body>
+    <!-- Encabezado de nombre de página -->
+    <div class="contenedorEncabezado" id="inicio">
+        <a href="../index.html" target="_self">
+            <img class="imagenLogo" alt="IA logo" src="../images/logo.png">
+        </a>
+        <h1 class="textoTitulo">
+            <a href="../index.html" target="_self">
+                Generación de imágenes con modelos de difusión
+            </a>
+        </h1>
+    </div>
+
+    <!-- contenedor padre para menú de navegación y contenido -->
+    <div class="contenedorMaestro">
+
+        <input type="checkbox" id="expandirMenu">
+        <label id="expandirMenuEtiqueta" for="expandirMenu">
+            <img class="expandir" src="../images/Arriba.png">
+            <img class="contraer" src="../images/Abajo.png">
+        </label>
+
+        <ul class="navegacion">
+            <li class="itemVolver">
+                <a href="#inicio" target="_self">
+                    <button>
+                        <img src="../images/Volver.png">
+                        <p>Volver arriba</p>
+                    </button>
+                </a>
+            </li>
+            <li>
+                <ul>
+                    <li>
+                        <a href="../index.html#modelosDifusion" target="_self">
+                            <button>
+                                Modelos de difusión
+                            </button>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../index.html#conceptosTecnicos" target="_self">
+                            <button>
+                                Conceptos Teóricos
+                            </button>
+                        </a>
+                    </li>
+                    <li>
+                    <a href="../index.html#componentes" target="_self">
+                        <button>
+                            Componentes
+                        </button>
+                    </a>
+                    </li>
+                </ul>
+                <a  href="../index.html" target="_self">
+                    <button>
+                        <img src="../images/Home.png">
+                        <p>Introducción</p>
+                    </button>
+                </a>
+            </li>
+            <li>
+                <ul>
+                    <li>
+                    <a href="desarrollo.html#contribucion" target="_self">
+                        <button>
+                            Contribución mundial a IA
+                        </button>
+                    </a>
+                        </li>
+                    <li>
+                    <a href="desarrollo.html#equipos" target="_self">
+                        <button>
+                            Equipos Importantes
+                        </button>
+                    </a>
+                        </li>
+                </ul>
+                <a href="desarrollo.html" target="_self">
+                    <button>
+                        <img src="../images/Tools.png">
+                        <p>Desarollo</p>
+                    </button>
+                </a>
+
+            </li>
+            <li>
+                <ul>
+                    <li>
+                    <a href="historia.html#antecedentes" target="_self">
+                        <button>
+                            Antecedentes Históricos
+                        </button>
+                    </a>
+                        </li>
+                    <li>
+                    <a href="historia.html#moderno" target="_self">
+                        <button>
+                            Desarrollo en la Era Moderna
+                        </button>
+                    </a>
+                        </li>
+                    <li>
+                    <a href="historia.html#futuro" target="_self">
+                        <button>
+                            Futuro y desarrollos actuales
+                        </button>
+                    </a>
+                        </li>
+                </ul>
+                <a href="historia.html" target="_self">
+                    <button>
+                        <img src="../images/Paper.png">
+                        <p>Historia</p>
+                    </button>
+                </a>
+            </li>
+            <li>
+                <ul>
+                    <li>
+                    <a href="aplicaciones.html#ejemplos" target="_self">
+                        <button>
+                            Ejemplos de uso
+                        </button>
+                    </a>
+                        </li>
+                </ul>
+                <a href="aplicaciones.html" target="_self">
+                    <button>
+                        <img src="../images/Activity.png">
+                        <p>Aplicaciones</p>
+                    </button>
+                </a>
+
+            </li>
+            <li>
+                <a href="personajes.html" target="_self">
+                    <button>
+                        <img src="../images/People.png">
+                        <p>Personajes</p>
+                    </button>
+                </a>
+            </li>
+            <li>
+                <ul>
+                    <li>
+                        <a href="referencias.html#imagenes" target="_self">
+                            <button>
+                                Imágenes
+                            </button>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="referencias.html#referencias" target="_self">
+                            <button>
+                                Referencias
+                            </button>
+                        </a>
+                    </li>
+                </ul>
+                <a href="referencias.html" target="_self">
+                    <button>
+                        <img src="../images/Credits.png">
+                        <p>Créditos</p>
+                    </button>
+                </a>
+            </li>
+        </ul>
+
+        <!-- contenido principal -->
+        <div class="contenedorContenido">
+            <h1 class="textoTituloContenido">
+                Personajes
+            </h1>
+            <div class="contenedorSeparador"></div>
+
+            <!-- 
+                Tabla de personajes, la intercalación de elementos con imagen alineada a 
+                izquierda o derecha se realiza en la hoja de estilos
+            -->
+            <div class="tablaGeneral">
+                <div>
+                    <div>
+                        <!-- Cada nombre de persona se ve acompañado de una imagen asociada-->
+                        <p class="textoPildora">Daedalus</p>
+                        <img src="../images/Daedalus.jpg" alt="Daedalus" />
+                    </div>
+                    <div>
+                        <p class="textoContenido">
+                            Daedalus fue un habilidoso <b>arquitecto y constructor</b>, conocido en la mitología griega por
+                            diseñar
+                            y
+                            construir el laberinto que imprisionó al Minotauro. Sin embargo, también se dice que
+                            llegó a
+                            construir
+                            uno de los <b>primeros autómatas en la historia</b>, logrando mover estatuas de madera usando
+                            Mercurio.
+                            Incluso, Daedalus llegaría a incorporar voz artificial a sus <b>estatuas móviles</b>,
+                            probablemente
+                            una
+                            de las
+                            primeras aproximaciones a la generación artificial de un elemento asociado al humano, y
+                            por
+                            tanto, a su
+                            inteligencia.
+                        </p>
+
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <p class="textoPildora">Audrey Markov</p>
+                        <img src="../images/Markov.jpg" alt="Daedalus" />
+                    </div>
+                    <div>
+                        <p class="textoContenido">
+                            Markov fue un matemático ruso conocido por sus aportes a la <b>teoría de la probabilidad</b>,
+                            siendo de interés la
+                            herramienta de su autoría conocida como Cadena de Markov, la cual relaciona el valor de
+                            una variable
+                            futura
+                            con
+                            los
+                            valores de variables en el presente, pero independiente de las valores de éstas últimas
+                            en el
+                            pasado.
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <p class="textoPildora">Alan Turing</p>
+                        <img src="../images/Turing.jpg" alt="Daedalus" />
+                    </div>
+                    <div>
+                            <p class="textoContenido">
+                                Alan Turing fue conocido por sus aportes a la <b>matemática</b>, <b>criptografía</b>, <b>lógica</b>,
+                                <b>estadística</b>,
+                                la
+                                computación y el desarrollo de la inteligencia artificial. Gracias a su planteamiento de
+                                la
+                                <b>teoría
+                                de la
+                                computabilidad</b> hoy en día es posible juzgar la inteligencia de una máquina gracias a la
+                                <b>Prueba
+                                de
+                                Turing</b>.
+                            </p>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <p class="textoPildora">Harold Cohen</p>
+                        <img src="../images/Cohen.jpg" alt="Daedalus" />
+                    </div>
+                    <div>
+                        <p class="textoContenido">
+                            Fue un <b>artista británico</b> conocido por crear <b>AARON</b>, un programa lanzado en los años 2000
+                            y diseñado para <b>producir
+                            pinturas y
+                            dibujos de manera autónoma</b>, varias de las obras creadas a través
+                            de
+                            este
+                            programa han sido exhibidas como obras de arte auténticas.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

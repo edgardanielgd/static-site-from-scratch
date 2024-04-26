@@ -1,0 +1,622 @@
+/* 
++ 
+* Estilos generales para todos los tamaños de pantalla
+* (sobreescritos para tamaños de pantalla pequeños y medianos)
+* 
+*/
+
+/* Estilo universal para el cuerpo del documento */
+body {
+    background-color: #d8dada;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 50px;
+}
+
+/* Estilos para enlaces */
+a {
+    /* Remueve todos los estilos por defecto de la etiqueta a */
+    all: unset;
+    cursor: pointer;
+    word-break: break-word;
+}
+
+/* Estilos de contenedores */
+
+/* Encabezado de la página */
+.contenedorEncabezado {
+
+    /* Presentar los elementos alineados horizontalmente */
+    display: flex;
+    flex-direction: row;
+
+    background-color: #b11a21;
+    
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    
+    vertical-align: middle;
+
+    /* Dibujar una sombra debajo del encabezado de la página:
+    sin sombra a la derecha, 10px de sombra abajo y un desenfoque de 10px,
+    la sombra será de color negro */
+
+    box-shadow: 0px 10px 15px #000000;
+    
+    text-align: center;
+    
+    max-width: 100%;
+}
+
+/* Estilo para título del documento */
+.contenedorEncabezado h1 {
+    margin: auto;
+}
+
+/* Estilo para el enlace que se encuentra en el texto del título */
+.contenedorEncabezado h1 a {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20pt;
+    color: white;
+}
+
+/* Contenedor para sucesos históricos y personajes */
+.contenedorReducido {
+    /* Un margen automático permite corregir la alineación 
+    de éste componente hijo con respecto al padre */
+    margin: auto;
+    width: 80%;
+}
+
+/* Contenedor de contenido en texto dentro de cada pagina  */
+.contenedorContenido {
+    max-width: 100%;
+    padding-left: 20px;
+    padding-right: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+/* Contenedor usado para dibujar una línea separadora de
+tamaño fijo (40% del ancho del padre) */
+.contenedorSeparador {
+    color: #b11a21;
+    border-bottom: 2px #b11a21 solid;
+    width: 40%;
+    align-self: center;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Contenedor encargado de mostrar los elementos en fila cuando la pantalla
+es suficientemente grande. Cuando la pantalla es pequeña, los presenta en columna
+*/
+.contenedorResponsivo {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Contenedor con margen en la zona inferior */
+.contenedorMargenInferior {
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+}
+
+/* Estilos de imágenes */
+
+/* Imagen de logo de página */
+.imagenLogo {
+
+    /* Alinear al inicio del contedor flexbox (izquierda) */
+    align-self: flex-start;
+    width: 70px;
+    height: 70px;
+
+    /* Margin auto permite que éste ícono ajuste su margen
+    para acomodarse en el centro de vertical del padre */
+    margin: auto;
+
+    margin-left: 30px;
+    margin-right: 0;
+    padding: 0;
+}
+
+/* Imagenes generales con tamaño fijo  */
+.imagenGeneral {
+    width: 20%;
+    height: 20%;
+    margin: auto;
+}
+
+/* Cambiar tamaño de imagen cuando el cursor se encuentre sobre ella*/
+.imagenGeneral:hover {
+    width: 25%;
+    height: 25%;
+    transition: 0.2s;
+}
+
+/* Imágenes que aparecen junto a texto y que se 
+alinean al izquierda en el párrafo */
+.imagenParrafoIzquierda {
+    margin-right: 20px;
+}
+
+/* Imágenes que aparecen junto a texto y que se 
+alinean al derecha en el párrafo */
+.imagenParrafoDerecha {
+    margin-left: 20px;
+}
+
+/* Estilo para imágenes que conservan la relación de aspecto de la 
+imagen original, pero con cierta limitación de tamaño */
+.imgAspecto {
+    height: 20%;
+    width: 50%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* Cambiar tamaño de imagen cuando el cursor se encuentre sobre ella*/
+.imgAspecto:hover {
+    height: 25%;
+    width: 60%;
+}
+
+/* Estilo para subtítulos  */
+.textoPildora {
+    background-color: #b11a21;
+    color: white;
+    font-size: 24pt;
+    text-align: center;
+    border-radius: 10px;
+    padding: 5px;
+    width: 70%;
+    margin: auto;
+
+}
+
+/* Estilo de título en cada página */
+.textoTituloContenido {
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 25pt;
+    color: #b11a21;
+    padding: 20px;
+    background-color: #b11a211c;
+}
+
+/* Estilo de título en cada página */
+.textoSubtituloContenido {
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 22pt;
+    color: #b11a21;
+    padding: 10px;
+    border: #b11a21 3px solid;
+}
+
+/* Estilo para el título de cada sección en páginas
+como Actividades */
+.textoTituloSeccion {
+    color: #b11a21;
+    font-size: 20pt;
+    text-align: center;
+}
+
+/* Texto general para presentar el contenido plano 
+de todas las páginas */
+.textoContenido {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: justify;
+    
+    font-size: 16pt;
+    margin: auto;
+}
+
+.textoContenido > b {   
+    /* Remover el estilo por defecto para texto resaltado */
+    font-weight: normal;
+}
+
+/* Estilo para enlaces dentro de parrafos de contenido */
+.textoContenido a {
+    color: #b11a21;
+}
+
+/* Estilos de elementos de navegación */
+/* Ocultar el botón de selección permanentemente */
+#expandirMenu {
+    display: none;
+}
+
+/* Ocultar la representación visual del botón de despliegue por defecto */
+#expandirMenuEtiqueta {
+    display: none;
+}
+
+.navegacion {
+    /* Presentar elementos en fila */
+    display: flex;
+    flex-direction: row;
+    
+    /* Usar todo el ancho de pantalla disponible */
+    padding: 0;
+    margin: auto;
+    width: 100%;
+    
+    /* Mantener la barra de navegación en la sección inferior */
+    position: fixed;
+    bottom: 0%;
+    
+    /* Fijar un tamaño relativo para el alto de la fila de navegación */
+    height: 12%;
+}
+
+.navegacion li {
+    /* Ocupar todo el ancho disponible en el contenedor padre */
+    list-style: none;
+    width: 100%;
+    padding: auto;
+    
+    border: black 1px solid;
+}
+
+/* Estilo de botón dentro de cada enlace */
+.navegacion li a button {
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    
+    background-color: #b11a21;
+    
+    border: none;
+    
+    /* Ocupar todo el espacio disponible en ambas direcciones respecto al padre */
+    width: 100%;
+    height: 100%;
+
+    /* Cursor pointer permite que el mouse obtenga un 
+    símbolo de puntero  */
+    cursor: pointer;
+    
+    color: white;
+    
+    /* Usar un tamaño de texto relativo para evitar que la navegación ocupe excesivo espacio*/
+    font-size: 14pt;
+}
+
+.navegacion li.itemVolver a button {
+    background-color: #1AB1AA;
+}
+
+/* Asignar tamaño de ícono en cada botón */
+.navegacion li a button img {
+    
+    /* Acomodar imagen al botón de navegación */
+    margin: auto;
+    
+    width: auto;
+    height: 80%;
+    
+    max-width: 100%;
+}
+
+/* Ocultar texto de botón de navegación */
+.navegacion li a button p {
+    display: none;
+    margin: auto;
+}
+
+/* Estilos para navegaciones embebidas */
+
+.navegacion li > ul {
+    /* Ocultar sub-navegaciones por defecto, pero ubicarlo donde debe estar */
+    top: 200%;
+    
+    opacity: 0;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    
+    left: 0;
+    padding: 0;
+    
+    width: 100%;
+    height: 100%;
+    
+    transition: opacity 0.5s;
+}
+
+/* Mostrar submenús cuando el elemento padre es apuntado por el cursor */
+.navegacion li:hover > ul {
+    opacity: 1;
+    top: -100%;
+}
+
+/* Se oculta ícono y se muestra texto en evento hover */
+.navegacion li a button:hover img {
+    display: none;
+}
+
+.navegacion li a button:hover p {
+    display: block;
+}
+
+.listaContenido {
+    padding-left: 20px;
+    font-size: 16pt;
+    list-style: none;
+    word-break: break-all;
+}
+
+.listaContenido li {
+    border-left: #b11a21 2px solid;
+    margin-bottom: 10px;
+    padding-left: 10px;
+}
+
+.listaContenido li a {
+    color: #b11a21;
+    
+    /* Dividir una misma palabra en varias líneas cuando el contenido
+    * no se acomode a la pantalla
+    */
+    word-break: break-all
+}
+
+/* Lista de enlaces general para referencias o recursos externos */
+.listaEnlacesRapidos {
+    display: flex;
+    flex-direction: row;
+    
+    width: 100%;
+}
+
+.listaEnlacesRapidos a {
+    background-color: #b11a21;
+    color: white;
+    
+    text-align: center;
+    
+    font-size: 16pt;
+    
+    width: 100%;
+    min-height: 100%;
+    
+    margin-left: auto;
+    
+}
+
+.listaEnlacesRapidos a:hover {
+    background-color: white;
+    color: #b11a21;
+}
+
+/* Estilos globales */
+
+/* Estilo para los elementos visuales que requieren de un borde 
+y sombra de resalte, usado para ciertas imágenes */
+.bordeSombra {
+    border-radius: 10px;
+    border: #b11a21 2px solid;
+    box-shadow: 10px 10px 5px #858484;
+}
+
+/* Estilos de elementos dispuestos en cuadrículas */
+
+.tablaGeneral {
+    display: flex;
+    flex-direction: column;
+}
+
+.tablaGeneral > div {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.tablaGeneral > div:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.tablaGeneral > div > div {
+    width: 50%;
+    
+    vertical-align: middle;
+    margin-top: auto;
+    margin-bottom: auto;
+    
+    /* Alinear la imagen interior en el centro */
+    text-align: center;
+
+    padding: 10px;
+}
+
+.tablaGeneral > div > div img {
+    width: 200px;
+    height: 200px;
+
+    margin-top: 20px;
+
+    /* Borde que forma un circulo perfecto */
+    border-radius: 50%;
+    border: #b11a21 3px solid;
+}
+
+.tablaGeneral > div > div img:hover {
+    border-radius: 0;
+}
+
+/* 
++ 
+* Estilos para tamaños de pantalla medianos y pequeños
+* (sobreescritos para tamaños de pantalla pequeños)
+* 
+*/
+
+@media screen and (max-width: 1200px) {
+    .contenedorEncabezado {
+        /* Presentar elementos de encabezado en columna */
+        flex-direction: column;
+    }
+    
+    .listaEnlacesRapidos {
+        /* Presentar elementos de enlaces rápidos en columna */
+        flex-direction: column;
+    }
+    
+    .tablaGeneral {
+        /* Una única columna para esta tabla */
+        grid-template-columns: 1fr;
+    }
+    
+    .navegacion li a button {
+        /* Ajustar tamaño de texto en menú */
+        font-size: 10pt;
+    }
+}
+
+/* 
++ 
+* Estilos generales para tamaños de pantalla pequeños
+* 
+*/
+@media screen and (max-width: 800px) {
+    
+    /* Resaltar el texto de párrafos cuando el mouse se encuentra sobre ellos
+    a fin de hacer la visualización mas agradable
+    */
+    .textoContenido {
+        border-left: #b11a21 2px solid;
+        padding-left: 10px;
+        font-size: 18pt;
+    }
+    
+    /* Resaltar términos importantes cuando el mouse se sitúa sobre el párrafo padre */
+    .textoContenido > b {
+        background-color: #b11a21;
+        color: white;
+
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    
+    /* Presenta elementos de tabla en columna cuando el tamaño de pantalla es pequeño */
+    .tablaGeneral > div, .tablaGeneral > div:nth-child(even) {
+        flex-direction: column;
+    }
+    
+    /* 
+    * Ya que se presenta la imagen con margen a los lados en otras pantallas, 
+    * remover este margen para permitir la alineación automática en la mitad de la ventana
+    */
+    .imagenParrafoIzquierda {
+        margin-right: auto;
+    }
+    .imagenParrafoDerecha {
+        margin: auto;
+    }
+    
+    /* Presenta elementos en columna cuando el tamaño de pantalla es pequeño */
+    .contenedorResponsivo {
+        flex-direction: column;
+    }
+    
+    .tablaGeneral > div > div {
+        width: 100%;
+    }
+    
+    /* Por defecto ocultar el menú en pantallas pequeñas */
+    .navegacion {
+        display: none;
+        bottom: 7%;
+    }
+    
+    /* 
+    * Estilos para botón de expansión de menú 
+    */
+    #expandirMenu:checked ~ .navegacion {
+        display: flex;
+    }
+    
+    #expandirMenuEtiqueta {
+        display: flex; 
+        
+        background-color: #b11a21;
+
+        width: 100%;
+
+        position: fixed;
+        bottom: 0;
+        height: 7%;
+
+        text-align: center;
+
+        cursor: pointer;
+    }
+
+    #expandirMenuEtiqueta img {
+        margin: auto;
+        height: 100%;
+        width: auto;
+    }
+    
+    /* Alternar entre estados de botón de despliegue */
+
+    #expandirMenuEtiqueta img.expandir {
+        display: block;
+    }
+    
+    #expandirMenuEtiqueta img.contraer {
+        display: none;
+    }
+    
+    #expandirMenu:checked ~ #expandirMenuEtiqueta img.expandir {
+        display: none;
+    }
+    
+    #expandirMenu:checked ~ #expandirMenuEtiqueta img.contraer {
+        display: block;
+    }
+    
+    .navegacion li a button {
+        /* Ajustar tamaño de texto en menú */
+        font-size: 6pt;
+    }
+}
+
+/* 
++ 
+* Estilos generales para tamaños de pantalla medianos y grandes
+* (no deseables en tamaños pequeños)
+* 
+*/
+@media screen and (min-width: 800px) {
+    
+    /* Resaltar el texto de párrafos cuando el mouse se encuentra sobre ellos
+    a fin de hacer la visualización mas agradable
+    */
+    .textoContenido:hover {
+        border-left: #b11a21 2px solid;
+        padding-left: 10px;
+        font-size: 18pt;
+        transition-duration: 0.2s;
+    }
+
+    /* Resaltar términos importantes cuando el mouse se sitúa sobre el párrafo padre */
+    .textoContenido:hover > b {
+        background-color: #b11a21;
+        color: white;
+
+        /* Aplicar un tiempo de transición especial para los efectos de color */
+        transition: color 0.7s, background-color 0.7s;
+
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}

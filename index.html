@@ -1,0 +1,338 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta lang="es">
+    <title>Modelo Stable Diffusion y la generación de imágenes con modelos de difusión</title>
+
+    <!-- Asociar hoja de estilos de página -->
+    <link rel="stylesheet" href="styles/style.css" type="text/css">
+
+    <!-- Asociar logo a la página -->
+    <link rel="shortcut icon" href="images/logo.png" />
+    
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"> </script>
+</head>
+
+<body>
+    <script src="scripts/script.js"> </script>
+    <!-- Encabezado de nombre de página -->
+    <div class="contenedorEncabezado" id="inicio">
+        <a href="index.html" target="_self">
+            <img class="imagenLogo" alt="IA logo" src="images/logo.png">
+        </a>
+        <h1>
+            <a href="index.html" target="_self">
+                Generación de imágenes con modelos de difusión
+            </a>
+        </h1>
+    </div>
+
+    <!-- contenedor padre para menú de navegación y contenido -->
+    <div class="contenedorMaestro">
+        <input type="checkbox" id="expandirMenu">
+        <label id="expandirMenuEtiqueta" for="expandirMenu">
+            <img class="expandir" src="images/Arriba.png">
+            <img class="contraer" src="images/Abajo.png">
+        </label>
+
+        <ul class="navegacion">
+            <li class="itemVolver">
+                <a href="#inicio" target="_self">
+                    <button>
+                        <img src="images/Volver.png">
+                        <p>Volver arriba</p>
+                    </button>
+                </a>
+            </li>
+            <li>
+                <ul>
+                    <li>
+                        <a href="index.html#modelosDifusion" target="_self">
+                            <button>
+                                Modelos de difusión
+                            </button>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="index.html#conceptosTecnicos" target="_self">
+                            <button>
+                                Conceptos Teóricos
+                            </button>
+                        </a>
+                    </li>
+                    <li>
+                    <a href="index.html#componentes" target="_self">
+                        <button>
+                            Componentes
+                        </button>
+                    </a>
+                    </li>
+                </ul>
+                <a  href="index.html" target="_self">
+                    <button>
+                        <img src="images/Home.png">
+                        <p>Introducción</p>
+                    </button>
+                </a>
+            </li>
+            <li>
+                <ul>
+                    <li>
+                    <a href="pages/desarrollo.html#contribucion" target="_self">
+                        <button>
+                            Contribución mundial a IA
+                        </button>
+                    </a>
+                        </li>
+                    <li>
+                    <a href="pages/desarrollo.html#equipos" target="_self">
+                        <button>
+                            Equipos Importantes
+                        </button>
+                    </a>
+                        </li>
+                </ul>
+                <a href="pages/desarrollo.html" target="_self">
+                    <button>
+                        <img src="images/Tools.png">
+                        <p>Desarollo</p>
+                    </button>
+                </a>
+
+            </li>
+            <li>
+                <ul>
+                    <li>
+                    <a href="pages/historia.html#antecedentes" target="_self">
+                        <button>
+                            Antecedentes Históricos
+                        </button>
+                    </a>
+                        </li>
+                    <li>
+                    <a href="pages/historia.html#moderno" target="_self">
+                        <button>
+                            Desarrollo en la Era Moderna
+                        </button>
+                    </a>
+                        </li>
+                    <li>
+                    <a href="pages/historia.html#futuro" target="_self">
+                        <button>
+                            Futuro y desarrollos actuales
+                        </button>
+                    </a>
+                        </li>
+                </ul>
+                <a href="pages/historia.html" target="_self">
+                    <button>
+                        <img src="images/Paper.png">
+                        <p>Historia</p>
+                    </button>
+                </a>
+            </li>
+            <li>
+                <ul>
+                    <li>
+                    <a href="pages/aplicaciones.html#ejemplos" target="_self">
+                        <button>
+                            Ejemplos de uso
+                        </button>
+                    </a>
+                        </li>
+                </ul>
+                <a href="pages/aplicaciones.html" target="_self">
+                    <button>
+                        <img src="images/Activity.png">
+                        <p>Aplicaciones</p>
+                    </button>
+                </a>
+
+            </li>
+            <li>
+                <a href="pages/personajes.html" target="_self">
+                    <button>
+                        <img src="images/People.png">
+                        <p>Personajes</p>
+                    </button>
+                </a>
+            </li>
+            <li>
+                <ul>
+                    <li>
+                        <a href="pages/referencias.html#imagenes" target="_self">
+                            <button>
+                                Imágenes
+                            </button>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="pages/referencias.html#referencias" target="_self">
+                            <button>
+                                Referencias
+                            </button>
+                        </a>
+                    </li>
+                </ul>
+                <a href="pages/referencias.html" target="_self">
+                    <button>
+                        <img src="images/Credits.png">
+                        <p>Créditos</p>
+                    </button>
+                </a>
+            </li>
+        </ul>
+
+        <!-- contenido principal -->
+        <div class="contenedorContenido">
+            <h1 class="textoTituloContenido">
+                Introducción y presentación del tema
+            </h1>
+            <div class="contenedorSeparador"></div>
+            
+            <div class="contenedorResponsivo">
+                <img src="images/Astronaut.jpg" alt="Ejemplo de stable diffusion"
+                            class="imagenGeneral imagenParrafoIzquierda bordeSombra">
+            
+                <p class="textoContenido">
+                    El aprendizaje de máquina y en general el género de la <b>Inteligencia Artifical</b> ha demostrado en los últimos años estar cada vez mas cerca de la expectativa planteada por relatos y películas de ciencia ficción donde se trata el tema desde todo tipo de perspectivas. Entre las herramientas y nuevos elementos que se encuentran en la actualidad se encuentran transcriptores y generadores de textos y sonidos, procesadores de lenguaje humano, visión por computadora e incluso aplicaciones de dominio específico relevantes para ciertas áreas de trabajo.
+                </p>
+            </div>
+            
+            
+            <p class="textoContenido">
+                Sin embargo, la característica que concierne al presente trabajo es la capacidad de <b>generar imágenes a partir de entradas</b> desde distintos orígenes y formatos, principalmente textos y otras imágenes. Así mismo, se ahondará en algunas arquitecturas y modelos que hacen posible la capacidad mencionada, principalmente, los modelos de difusión y sus variantes.
+            </p>
+            
+            <div id="modelosDifusion">
+                <h1 class="textoSubtituloContenido">
+                    Modelos de Difusión
+                </h1>
+
+                <p class="textoContenido">
+                    En el aprendizaje automático, los modelos de difusión, también conocidos como modelos probabilísticos de difusión o modelos generativos basados en puntuación, son una clase de <a href="https://en.wikipedia.org/wiki/Latent_variable_model">modelos generativos de variable latente</a>. La meta de un modelo de difusión es aprender un proceso de difusión que genera una <b>distribución probabilística</b> para un conjunto de datos dado, y desde la cuál sea posible <b>muestrear nuevos ejemplos</b> (en nuestro caso imágenes) nunca antes vistas durante etapas de entrenamiento.
+                </p>
+
+                <p class="textoContenido">
+                    Dentro del conjunto de modelos que se quiere tratar existe una cantidad significativa de implementaciones y variantes distintas <b>usadas y optimizadas</b> para diferentes contextos y propósitos. A continuación se describen algunas de éstas variantes y características generales relevantes que las describen y diferencian entre sí.
+                </p>
+                
+                <div>
+                    <h1 class="textoTituloSeccion">
+                        Stable Diffusion
+                    </h1>
+
+                    <p class="textoContenido">
+                        <b>Stable Diffusion</b> es un modelo de aprendizaje profundo lanzado en 2022 que <b>produce imágenes
+                        fotorrealistas únicas</b> a partir de mensajes de texto u otras imágenes. Este modelo es usado principalmente para generar imágenes detalladas <b>condicionadas por una descripción por texto</b>, sin embargo, suele extenderse con excelentes resultados a la edición de imágenes, por ejemplo, alternar entre estilos de pintura, adición de elementos visuales e incluso la transformación de una imagen a través de un bloque de texto
+                        que indica el cambio a realizar. A diferencia de modelos de la competencia como DALL-E, Stable Diffusion es de <b>código abierto</b> y no limita artificialmente las imágenes que produce. <b>Es completamente gratis</b> y se puede acceder a él en línea, además, fue elogiado por PC World como "la próxima aplicación revolucionaria para su PC".
+                    </p>
+                </div>
+                
+                <div>
+                <h1 class="textoTituloSeccion">
+                    DALL-E
+                </h1>
+                
+                <p class="textoContenido">
+                    <b>DALL-E</b> es una familia de modelos "Texto a Imagen" desarrollados por <a href="https://en.wikipedia.org/wiki/OpenAI">OpenAI</a> que generan imagenes digitales a partir de descripciones de las mismas en lenguaje natural a través de textos usualmente denominados <b>"prompts"</b>. ChatGPT, una de las tendencias actuales en aprendizaje profundo, incorpora éste modelo como núcleo para ciertas características de le herramienta. La versión más reciente de DALL-E al momento de creación de este trabajo es <b>DALL-E 3</b>, el cual es el resultado de un proceso continuo de mejora que ahora permite la generación de imágenes de alta resolución y detalle. Así mismo, esta tecnología se encuentra incorporada como <b>complemento de otras herramientas</b>, entre ellas, Bing de Microsoft.
+                </p>
+                    </div>
+                
+                <h1 class="textoTituloSeccion">
+                    Midjourney
+                </h1>
+                
+                <p class="textoContenido">
+                    Al igual que sus contrapartes, <b>Midjourney</b> se creó para permitir la generación de imágenes a través de textos que describen su contenido. Así mismo, se encuentra a la vanguardia en términos de <b>calidad</b>, <b>resolución</b> y <b>precisión de imágenes</b>. Su principal plataforma de uso es <b>Discord</b>, a través de un bot público creado por la compañía autora del modelo.
+                </p>
+            </div>
+            
+            <div id="conceptosTecnicos">
+                <h1 class="textoSubtituloContenido">
+                    Conceptos técnicos
+                </h1>
+                
+                <div class="contenedorResponsivo">
+                    
+                    <p class="textoContenido">
+                        La mayoría de los modelos de difusión de código abierto, y por supuesto, bajo algunas restricciones de calidad, pueden ejecutarse en el <b>hardware del usuario</b> equipado con una tarjeta gráfica (GPU).
+                        Su entrenamiento busca remover una secuencia de aplicaciones de
+                        <b>ruido Gaussiano</b> sobre una imagen original. El conjunto de capas que se encarga de dicha reducción de
+                        ruido puede interpretarse como una secuencia de auto-codificadores reductores de ruido, es decir, capas de una red neuronal que se encargan de traducir una entrada (en este caso una imagen) a un vector de
+                        valores numéricos que busca representar dicha entrada con un <b>conjunto relativamente pequeño de números</b>
+                        que condensa su significado y características principales.
+                    </p>
+                    
+                    <img src="images/Goya.png" alt="Ejemplo de stable diffusion"
+                    class="imagenGeneral imagenParrafoDerecha bordeSombra">
+                </div>
+                
+                <p class="textoContenido">
+                    Por otra parte, modelos como DALL-E introducen pasos adicionales que mejoran el desempeño del modelo. La técnica conocida como <b>CLIP (Constrastive Language-Image Pre-training)</b> es usada para entrenar simultáneamente dos modelos, uno se encargará de <b>traducir una pieza de texto a un vector de valores</b>, mientras que el otro <b>convertirá una imagen a otro vector</b>. De esta manera, y al tratarse de un modelo independiente a DALL-E, pueden usarse los resultados de CLIP como entrada adicional a DALL-E para mejorar el desempeño y representatividad de la imagen generada.
+                </p>
+                <p class="textoContenido">
+                    Finalmente, y de pendiendo de la complejidad de la variante, suele incorporarse el proceso de <b>aprendizaje de una función de puntuación</b> que permita identificar la medida de <b>relación entre dos imágenes</b>, por ejemplo, una imagen de un gato con dos bigotes contra una imagen de otro gato con cuatro bigotes. De esta manera, puede permitirse la modificación de imágenes ya creadas a fin de ampliar el rango de resultados generados conservando las características generales de un primer muestreo.
+                </p>
+            </div>
+            
+            <div id="componentes">
+                <h1 class="textoSubtituloContenido">
+                    Componentes
+                </h1>
+                
+                <!-- Lista no ordenada de componentes del modelo -->
+                <p class="textoContenido">
+                    Como se mencionó anteriormente, diferentes variantes de modelos de difusión aplicadas a la generación de imagenes pueden requerir de <b>arquitecturas más complejas</b>, como el preprocesamiento de texto con CLIP o la adición de información como estilos de imagen codificada mediante vectores de valores. Sin embargo, se describen a continuación los <b>tres componentes</b> mas usuales en este tipo de modelos:
+                </p>
+                <div class="listaContenido">
+                    <p class="textoContenido contenedorMargenInferior">
+                        <b>Auto-condificador variacional</b> : Como se mencionó anteriormente, se trata de una capa de la
+                        red encargada de representar una imagen de entrada con un conjunto relativamente pequeño de valores.
+                        La característica de variacional se debe a que, más allá de resumir una entrada como un vector de
+                        valores estáticos, se aprende en su lugar una distribución probabilística para cada uno de los
+                        componentes de éste vector (conocido como vector latente); así mismo, es a éste conjunto de valores
+                        al cual se le es aplicado rudio Gaussiano secuencialmente, como se mencionó anteriormente.
+                    </p>
+                    <p class="textoContenido contenedorMargenInferior">
+                        <b>U-Net</b> : La U-Net del modelo es una <a
+                            href="https://es.wikipedia.org/wiki/Red_neuronal_convolucional">red convolucional</a>
+                        encargada de eliminar el ruido introducido previamente por el Auto-codificador variacional, en éste
+                        punto es donde puede usarse la codificación de un prompt o texto proveído para decodificar el vector
+                        latente (al que se le ha aplicado ruido artificialmente) a una imagen de salida, siendo éste el
+                        resultado final del modelo. <br>
+                        A continuación puede observarse un ejemplo del proceso de eliminación de ruido de una imagen,
+                        obteniendo finalmente un resultado nítido:
+                    </p>
+                    <img src="images/DecoderSteps.png" alt="Arquitectura del modelo"
+                        class="imgAspecto bordeSombra">
+                    <p class="textoContenido contenedorMargenInferior">
+                        <b>Codificador de texto opcional</b> : La decodificación del ruido producido artificalmente sobre
+                        imágenes no necesariamente involucra la introducción de un texto codificado, usualmente conocido
+                        como prompt, sin embargo, suele ser de utilidad la inclusión de éste componente a fin de
+                        obtener resultados dependientes del texto y que tengan relación con su significado. El algoritmo
+                        usado para
+                        codificar el texto es CLIP ViT-L/14.
+                    </p>
+            </div>
+                
+            </div>
+
+            <!-- Elementos aislados finales -->
+
+            <p class="textoContenido">
+                Como ejemplo de la arquitectura descrita, se presenta a continuación una vista general de <b>Stable Diffusion</b>, una de las implementaciones de modelos de difusión aplicadas a la generación de imágenes con texto:
+            </p>
+
+            <div class="contenedorCentrado">
+                <img src="images/StableDiffusionModel.png" alt="Arquitectura del modelo" class="imgAspecto bordeSombra">
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

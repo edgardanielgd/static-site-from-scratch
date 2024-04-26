@@ -1,0 +1,507 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta lang="es">
+    <title>Modelo Stable Diffusion y la generación de imágenes con modelos de difusión</title>
+
+    <!-- Asociar hoja de estilos de página -->
+    <link rel="stylesheet" href="../styles/style.css" type="text/css">
+
+    <!-- Asociar logo a la página -->
+    <link rel="shortcut icon" href="images/logo.png" />
+</head>
+
+<body>
+    <!-- Encabezado de nombre de página -->
+    <div class="contenedorEncabezado" id="inicio">
+        <a href="../index.html" target="_self">
+            <img class="imagenLogo" alt="IA logo" src="../images/logo.png">
+        </a>
+        <h1 class="textoTitulo">
+            <a href="../index.html" target="_self">
+                Generación de imágenes con modelos de difusión
+            </a>
+        </h1>
+    </div>
+
+    <!-- contenedor padre para menú de navegación y contenido -->
+    <div class="contenedorMaestro">
+
+        <input type="checkbox" id="expandirMenu">
+        <label id="expandirMenuEtiqueta" for="expandirMenu">
+            <img class="expandir" src="../images/Arriba.png">
+            <img class="contraer" src="../images/Abajo.png">
+        </label>
+
+        <ul class="navegacion">
+            <li class="itemVolver">
+                <a href="#inicio" target="_self">
+                    <button>
+                        <img src="../images/Volver.png">
+                        <p>Volver arriba</p>
+                    </button>
+                </a>
+            </li>
+            <li>
+                <ul>
+                    <li>
+                        <a href="../index.html#modelosDifusion" target="_self">
+                            <button>
+                                Modelos de difusión
+                            </button>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../index.html#conceptosTecnicos" target="_self">
+                            <button>
+                                Conceptos Teóricos
+                            </button>
+                        </a>
+                    </li>
+                    <li>
+                    <a href="../index.html#componentes" target="_self">
+                        <button>
+                            Componentes
+                        </button>
+                    </a>
+                    </li>
+                </ul>
+                <a  href="../index.html" target="_self">
+                    <button>
+                        <img src="../images/Home.png">
+                        <p>Introducción</p>
+                    </button>
+                </a>
+            </li>
+            <li>
+                <ul>
+                    <li>
+                    <a href="desarrollo.html#contribucion" target="_self">
+                        <button>
+                            Contribución mundial a IA
+                        </button>
+                    </a>
+                        </li>
+                    <li>
+                    <a href="desarrollo.html#equipos" target="_self">
+                        <button>
+                            Equipos Importantes
+                        </button>
+                    </a>
+                        </li>
+                </ul>
+                <a href="desarrollo.html" target="_self">
+                    <button>
+                        <img src="../images/Tools.png">
+                        <p>Desarollo</p>
+                    </button>
+                </a>
+
+            </li>
+            <li>
+                <ul>
+                    <li>
+                    <a href="historia.html#antecedentes" target="_self">
+                        <button>
+                            Antecedentes Históricos
+                        </button>
+                    </a>
+                        </li>
+                    <li>
+                    <a href="historia.html#moderno" target="_self">
+                        <button>
+                            Desarrollo en la Era Moderna
+                        </button>
+                    </a>
+                        </li>
+                    <li>
+                    <a href="historia.html#futuro" target="_self">
+                        <button>
+                            Futuro y desarrollos actuales
+                        </button>
+                    </a>
+                        </li>
+                </ul>
+                <a href="historia.html" target="_self">
+                    <button>
+                        <img src="../images/Paper.png">
+                        <p>Historia</p>
+                    </button>
+                </a>
+            </li>
+            <li>
+                <ul>
+                    <li>
+                    <a href="aplicaciones.html#ejemplos" target="_self">
+                        <button>
+                            Ejemplos de uso
+                        </button>
+                    </a>
+                        </li>
+                </ul>
+                <a href="aplicaciones.html" target="_self">
+                    <button>
+                        <img src="../images/Activity.png">
+                        <p>Aplicaciones</p>
+                    </button>
+                </a>
+
+            </li>
+            <li>
+                <a href="personajes.html" target="_self">
+                    <button>
+                        <img src="../images/People.png">
+                        <p>Personajes</p>
+                    </button>
+                </a>
+            </li>
+            <li>
+                <ul>
+                    <li>
+                        <a href="referencias.html#imagenes" target="_self">
+                            <button>
+                                Imágenes
+                            </button>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="referencias.html#referencias" target="_self">
+                            <button>
+                                Referencias
+                            </button>
+                        </a>
+                    </li>
+                </ul>
+                <a href="referencias.html" target="_self">
+                    <button>
+                        <img src="../images/Credits.png">
+                        <p>Créditos</p>
+                    </button>
+                </a>
+            </li>
+        </ul>
+
+        <!-- contenido principal -->
+        <div class="contenedorContenido">
+            <h1 class="textoTituloContenido">
+                Créditos y Referencias
+            </h1>
+            <div class="contenedorSeparador"></div>
+            <p class="textoContenido">
+                Hecho por <b>Edgar Daniel González Díaz</b>, estudiante de <b>Ingeniería de Sistemas y Computación</b>
+            </p>
+            
+            <div id="imagenes">
+                <h1 class="textoSubtituloContenido">
+                    Imágenes
+                </h1>
+                
+                <!-- Lista de enlaces a imágenes -->
+                <ul class="listaContenido">
+                <li>
+                    <a href="https://en.wikipedia.org/wiki/Daedalus#/media/File:Gaziantep_Zeugma_Museum_Daedalus_mosaic_1873.jpg">Imagen
+                        de Daedalus</a><br>
+                    (https://en.wikipedia.org/wiki/Daedalus#/media/File:Gaziantep_Zeugma_Museum_Daedalus_mosaic_1873.jpg)
+                </li>
+                <li>
+                    <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/AAMarkov.jpg/800px-AAMarkov.jpg">Imagen
+                        de Markov</a><br>
+                    (https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/AAMarkov.jpg/800px-AAMarkov.jpg)
+                </li>
+                <li>
+                    <a
+                        href="https://upload.wikimedia.org/wikipedia/commons/e/ea/Alan_Turing_%281912-1954%29_in_1936_at_Princeton_University_%28b%26w%29.jpg">Imagen
+                        de Turing</a><br>
+                    (https://upload.wikimedia.org/wikipedia/commons/e/ea/Alan_Turing_%281912-1954%29_in_1936_at_Princeton_University_%28b%26w%29.jpg)
+                </li>
+                <li>
+                    <a href="https://upload.wikimedia.org/wikipedia/en/f/f7/Harold_Cohen_%28artist%29.jpg">Imagen de
+                        Harold Cohen</a><br>
+                    (https://upload.wikimedia.org/wikipedia/en/f/f7/Harold_Cohen_%28artist%29.jpg)
+                </li>
+                <li>
+                    <a
+                        href="https://www.freepik.com/icon/artificial-intelligence_900961#fromView=search&term=inteligencia+artificial&track=ais&page=1&position=1&uuid=e00f13b1-c80b-4c93-a1b2-67533e47ec03">Logo
+                        de la página</a><br>
+                    (https://www.freepik.com/icon/artificial-intelligence_900961#fromView=search&term=inteligencia+artificial&track=ais&page=1&position=1&uuid=e00f13b1-c80b-4c93-a1b2-67533e47ec03)
+                </li>
+                <li>
+                    <a href="https://es.wikipedia.org/wiki/Archivo:Astronaut_Riding_a_Horse_(SDXL).jpg" target="_blank">
+                        Imagen de astronauta montado sobre un caballo generada con Stable Diffusion
+                    </a><br>
+                    (https://es.wikipedia.org/wiki/Archivo:Astronaut_Riding_a_Horse_(SDXL).jpg)
+                </li>
+                <li>
+                    <a href="https://en.wikipedia.org/wiki/File:Stable_Diffusion_architecture.png" target="_blank">
+                        Imagen de arquitectura de Stable Diffusion
+                    </a><br>
+                    (https://en.wikipedia.org/wiki/File:Stable_Diffusion_architecture.png)
+                </li>
+                <li>
+                    <a href="https://en.wikipedia.org/wiki/File:X-Y_plot_of_algorithmically-generated_AI_art_of_European-style_castle_in_Japan_demonstrating_DDIM_diffusion_steps.png"
+                        target="_blank">
+                        Proceso de decodificación de una imagen con ruido gaussiano secuencial
+                    </a><br>
+                    (https://en.wikipedia.org/wiki/File:X-Y_plot_of_algorithmically-generated_AI_art_of_European-style_castle_in_Japan_demonstrating_DDIM_diffusion_steps.png)
+                </li>
+                <li>
+                    <a href="https://vtlogo.com/wp-content/uploads/2023/03/runway-ai-inc-vector-logo.png"
+                        target="_blank">
+                        Logo de Runway
+                    </a><br>
+                    (https://vtlogo.com/wp-content/uploads/2023/03/runway-ai-inc-vector-logo.png)
+                </li>
+                <li>
+                    <a href="https://avatars.githubusercontent.com/u/30233788?s=280&v=4" target="_blank">
+                        Logo de CompVis
+                    </a><br>
+                    (https://avatars.githubusercontent.com/u/30233788?s=280&v=4)
+                </li>
+                <li>
+                    <a href="https://upload.wikimedia.org/wikipedia/commons/e/e2/Sigillum_Universitatis_Ludovico-Maximilianeae.svg"
+                        target="_blank">
+                        Logo Universidad de Múnich
+                    </a><br>
+                    (https://upload.wikimedia.org/wikipedia/commons/e/e2/Sigillum_Universitatis_Ludovico-Maximilianeae.svg)
+                </li>
+                <li>
+                    <a href="https://blogs.microsoft.com/wp-content/uploads/prod/2023/03/BingStories_16x9_EN-GB.jpg"
+                        target="_blank">
+                        Ejemplo creación de stories en Bing
+                    </a><br>
+                    (https://blogs.microsoft.com/wp-content/uploads/prod/2023/03/BingStories_16x9_EN-GB.jpg)
+                </li>
+                <li>
+                    <a href="https://blogs.microsoft.com/wp-content/uploads/prod/2023/03/BingStories_16x9_EN-GB.jpg"
+                        target="_blank">
+                        Ejemplo creación de stories en Bing
+                    </a><br>
+                    (https://blogs.microsoft.com/wp-content/uploads/prod/2023/03/BingStories_16x9_EN-GB.jpg)
+                </li>
+                <li>
+                    <a href="https://cc-prod.scene7.com/is/image/CCProdAuthor/FF-insideapps-PS-dt?$pjpeg$"
+                        target="_blank">
+                        Ejemplo de generación de imágenes con Adoble Firefly
+                    </a><br>
+                    (https://cc-prod.scene7.com/is/image/CCProdAuthor/FF-insideapps-PS-dt?$pjpeg$)
+                </li>
+                <li>
+                    <a href="https://www.mapchart.net" target="_blank">
+                        MapChart, útil para generación de gráficos con países resaltados en el mapa
+                    </a><br>
+                </li>
+                <li>
+                    <a href="https://www.flaticon.es/iconos-gratis/homa" title="homa iconos" target="_blank">Homa iconos creados por Icon Smart - Flaticon</a>
+                    <br>
+                    (https://www.flaticon.es/iconos-gratis/homa)
+                </li>
+                <li>
+                    <a href="https://www.flaticon.es/iconos-gratis/caja-de-herramientas" title="caja de herramientas iconos">Caja de herramientas iconos creados por Freepik - Flaticon</a>
+                    <br>
+                    (https://www.flaticon.es/iconos-gratis/caja-de-herramientas)
+                </li>
+                <li>
+                    <a href="https://www.flaticon.es/iconos-gratis/pergamino" title="pergamino iconos">Pergamino iconos creados por deemakdaksina - Flaticon</a>
+                    <br>
+                    (https://www.flaticon.es/iconos-gratis/pergamino)
+                </li>
+                <li>
+                    <a href="https://www.flaticon.es/iconos-gratis/actividad" title="actividad iconos">Actividad iconos creados por Freepik - Flaticon</a>
+                    <br>
+                    (https://www.flaticon.es/iconos-gratis/actividad)
+                </li>
+                <li>
+                    <a href="https://www.flaticon.es/iconos-gratis/grupo" title="grupo iconos">Grupo iconos creados por Mayor Icons - Flaticon</a>
+                    <br>
+                    (https://www.flaticon.es/iconos-gratis/grupo)
+                </li>
+                <li>
+                    <a href="https://www.flaticon.es/iconos-gratis/atribucion" title="atribución iconos">Atribución iconos creados por Eucalyp - Flaticon</a>
+                    <br>
+                    (https://www.flaticon.es/iconos-gratis/atribucion)
+                </li>
+                <li>
+                    <a href="https://www.flaticon.es/iconos-gratis/punta-de-flecha" title="punta de flecha iconos">Punta de flecha iconos creados por IconKanan - Flaticon</a>
+                    <br>
+                    (https://www.flaticon.es/iconos-gratis/punta-de-flecha)
+                </li>
+                <li>
+                    <a href="https://www.flaticon.es/iconos-gratis/flecha-hacia-abajo" title="flecha hacia abajo iconos">Flecha hacia abajo iconos creados por Stockio - Flaticon</a>
+                    <br>
+                    (https://www.flaticon.es/iconos-gratis/flecha-hacia-abajo)
+                </li>
+                <li>
+                    <a href="https://www.flaticon.es/iconos-gratis/flecha-arriba" title="flecha arriba iconos">Flecha arriba iconos creados por Pixel perfect - Flaticon</a>
+                    <br>
+                    (https://www.flaticon.es/iconos-gratis/flecha-arriba)
+                </li>
+                <li>
+                    <a href="https://www.freepik.es/foto-gratis/ruinas-acropolis_10292251.htm#fromView=search&page=1&position=19&uuid=3397dbf4-e0cb-4229-befd-f7ad900f6fb1">Imagen de Antigua Grecia</a>
+                    <br>
+                    (ttps://www.freepik.es/foto-gratis/ruinas-acropolis_10292251.htm#fromView=search&page=1&position=19&uuid=3397dbf4-e0cb-4229-befd-f7ad900f6fb1)
+                </li>
+                <li>
+                    <a href="https://www.freepik.es/foto-gratis/ciudad-inteligente-futurista-tecnologia-red-global-5g_13463111.htm#fromView=search&page=1&position=18&uuid=e72921a1-624a-4c1a-a0d4-dfaf979101b8">Imagen de tiempo moderno</a>
+                    <br>
+                    (https://www.freepik.es/foto-gratis/ciudad-inteligente-futurista-tecnologia-red-global-5g_13463111.htm#fromView=search&page=1&position=18&uuid=e72921a1-624a-4c1a-a0d4-dfaf979101b8)
+                </li>
+                <li>
+                    <a href="https://www.freepik.es/vector-gratis/futurista-tecnologia-fondo-azul-oscuro_31132034.htm#fromView=search&page=1&position=46&uuid=bc3cab04-5008-46a2-ae5c-18a45f808e19">Imagen de futuro</a>
+                    <br>
+                    (https://www.freepik.es/vector-gratis/futurista-tecnologia-fondo-azul-oscuro_31132034.htm#fromView=search&page=1&position=46&uuid=bc3cab04-5008-46a2-ae5c-18a45f808e19)
+                </li>
+
+            </ul>
+            </div>
+            <div id="referencias">
+                <h1 class="textoSubtituloContenido">
+                    Referencias
+                </h1>
+                
+                <!-- Lista de enlaces a referencias referenciados con formato APA v7 -->
+                <ul class="listaContenido">
+                    <li>
+                        (S/f). Amazon.com. Recuperado el 18 de febrero de 2024, de
+                        <a href="https://aws.amazon.com/es/what-is/stable-diffusion/" target="_blank">
+                            https://aws.amazon.com/es/what-is/stable-diffusion/
+                        </a>
+                    </li>
+                    <li>
+                        Wikipedia contributors. (s/f). Stable Diffusion. Wikipedia, The Free Encyclopedia.
+                        <a href="https://es.wikipedia.org/wiki/Stable_Diffusion" target="_blank">
+                            https://es.wikipedia.org/w/index.php?title=Stable_Diffusion&oldid=157131026
+                        </a>
+                    </li>
+                    <li>
+                        Wikipedia contributors. (2024, febrero 17). Runway (company). Wikipedia, The Free Encyclopedia.
+                        <a href="https://en.wikipedia.org/wiki/U-Net" target="_blank">
+                            https://en.wikipedia.org/w/index.php?title=U-Net&oldid=1193906790
+                        </a>
+                    </li>
+                    <li>
+                        (S/f). Techopedia.com. Recuperado el 18 de febrero de 2024, de
+                        <a href="https://www.techopedia.com/top-10-countries-leading-in-ai-research-technology"
+                            target="_blank">
+                            https://www.techopedia.com/top-10-countries-leading-in-ai-research-technology
+                        </a>
+                    </li>
+                    <li>
+                        (S/f). Adobe.com. Recuperado el 18 de febrero de 2024, de
+                        <a href="https://www.adobe.com/products/firefly.html" target="_blank">
+                            https://www.adobe.com/products/firefly.html
+                        </a>
+                    </li>
+                    <li>
+                        Resumen de las funciones de Adobe Firefly. (s/f). Adobe.com. Recuperado el 18 de febrero de 2024, de
+                        <a href="https://helpx.adobe.com/co/firefly/using/whats-new/2024.html" target="_blank">
+                            https://helpx.adobe.com/co/firefly/using/whats-new/2024.html
+                        </a>
+                    </li>
+                    <li>
+                        Mehdi, Y. (2023, marzo 21). Create images with your words - Bing Image Creator comes to the new
+                        Bing. The Official Microsoft Blog.
+                        <a href="https://blogs.microsoft.com/blog/2023/03/21/create-images-with-your-words-bing-image-creator-comes-to-the-new-bing/"
+                            target="_blank">
+                            https://blogs.microsoft.com/blog/2023/03/21/create-images-with-your-words-bing-image-creator-comes-to-the-new-bing/
+                        </a>
+                    </li>
+                    <li>
+                        GPT-4. (s/f). Openai.com. Recuperado el 18 de febrero de 2024, de
+                        <a href="https://openai.com/gpt-4" target="_blank">
+                            https://openai.com/gpt-4
+                        </a>
+                    </li>
+                    <li>
+                        Wikipedia contributors. (2024, febrero 9). Daedalus. Wikipedia, The Free Encyclopedia.
+                        <a href="https://en.wikipedia.org/w/index.php?title=Daedalus&oldid=1205390423" target="_blank">
+                            https://en.wikipedia.org/w/index.php?title=Daedalus&oldid=12053904230
+                        </a>
+                    </li>
+                    <li>
+                        Wikipedia contributors. (2024, enero 29). Automaton. Wikipedia, The Free Encyclopedia.
+                        <a href="https://en.wikipedia.org/w/index.php?title=Automaton&oldid=1200451721" target="_blank">
+                            https://en.wikipedia.org/w/index.php?title=Automaton&oldid=1200451721
+                        </a>
+                    </li>
+                    <li>
+                        Wikipedia contributors. (s/f). Andréi Márkov. Wikipedia, The Free Encyclopedia.
+                        <a href="https://es.wikipedia.org/w/index.php?title=Andr%C3%A9i_M%C3%A1rkov&oldid=156237426"
+                            target="_blank">
+                            https://es.wikipedia.org/w/index.php?title=Andr%C3%A9i_M%C3%A1rkov&oldid=156237426
+                        </a>
+                    </li>
+                    <li>
+                        Wikipedia contributors. (s/f). Alan Turing. Wikipedia, The Free Encyclopedia.
+                        <a href="https://es.wikipedia.org/w/index.php?title=Alan_Turing&oldid=158187544" target="_blank">
+                            https://es.wikipedia.org/w/index.php?title=Alan_Turing&oldid=158187544
+                        </a>
+                    </li>
+                    <li>
+                        Wikipedia contributors. (2023, noviembre 3). Harold Cohen (artist). Wikipedia, The Free
+                        Encyclopedia.
+                        <a href="https://en.wikipedia.org/w/index.php?title=Harold_Cohen_(artist)&oldid=1183239548"
+                            target="_blank">
+                            https://en.wikipedia.org/w/index.php?title=Harold_Cohen_(artist)&oldid=1183239548
+                        </a>
+                    </li>
+                    <li>
+                        Wikipedia contributors. (s/f-b). Universidad de Múnich. Wikipedia, The Free Encyclopedia.
+                        <a href="https://es.wikipedia.org/w/index.php?title=Universidad_de_M%C3%BAnich&oldid=157817053"
+                            target="_blank">
+                            https://es.wikipedia.org/w/index.php?title=Universidad_de_M%C3%BAnich&oldid=157817053
+                        </a>
+                    </li>
+                    <li>
+                         ChatGPT icon. (s/f). UXWing.
+                        <a href="https://uxwing.com/chatgpt-icon/"
+                            target="_blank">
+                            https://uxwing.com/chatgpt-icon/
+                        </a>
+                    </li>
+                   <li>
+                         Wikipedia contributors. (2024, marzo 24). Diffusion model. Wikipedia, The Free Encyclopedia. 
+                        <a href="https://en.wikipedia.org/w/index.php?title=Diffusion_model&oldid=1215339135"
+                            target="_blank">
+                            https://en.wikipedia.org/w/index.php?title=Diffusion_model&oldid=1215339135
+                        </a>
+                    </li>
+                    <li>
+                         Wikipedia contributors. (2024a, marzo 6). DALL-E. Wikipedia, The Free Encyclopedia. 
+                        <a href="https://en.wikipedia.org/w/index.php?title=DALL-E&oldid=1212079575"
+                            target="_blank">
+                            https://en.wikipedia.org/w/index.php?title=DALL-E&oldid=1212079575
+                        </a>
+                    </li>
+                    <li>
+                         Wikipedia contributors. (2024c, marzo 24). Midjourney. Wikipedia, The Free Encyclopedia. 
+                        <a href="https://en.wikipedia.org/w/index.php?title=Midjourney&oldid=1215320209"
+                            target="_blank">
+                            https://en.wikipedia.org/w/index.php?title=Midjourney&oldid=1215320209
+                        </a>
+                    </li>
+                    <li>
+                         Ashman, S. (2023, abril 2). ¿Qué se espera en el futuro de la inteligencia artificial? Forbes España; Forbes.
+                        <a href="https://forbes.es/tecnologia/258300/que-se-espera-en-el-futuro-de-la-inteligencia-artificial/"
+                            target="_blank">
+                            https://forbes.es/tecnologia/258300/que-se-espera-en-el-futuro-de-la-inteligencia-artificial/
+                        </a>
+                    </li>
+                    <li>
+                        Welcome back. (s/f). Stablediffusionweb.com.
+                        <a href="https://stablediffusionweb.com/app/image-generator"
+                            target="_blank">
+                            https://stablediffusionweb.com/app/image-generator
+                        </a>
+                    </li>                    
+                </ul>
+            </div>
+            
+        </div>
+    </div>
+
+</body>
+
+</html>
