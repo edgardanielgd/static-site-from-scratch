@@ -12,6 +12,10 @@
 
     <!-- Asociar logo a la página -->
     <link rel="shortcut icon" href="../images/logo.png" />
+    
+    <!-- Importe de librerias a usar -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"> </script>
+    <script src="./../../scripts/script.js"> </script>
 </head> 
 
 <body>
@@ -311,6 +315,7 @@
                     
                 </div>
             </div>
+            
             <div id="ejemplos">
                 <h1 class="textoSubtituloContenido">
                     Ejemplos de uso
@@ -355,6 +360,36 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            
+            <div id="experimentaloTuMismo">
+                <h1 class="textoSubtituloContenido">
+                    ¡Prúebalo tu mismo!
+                </h1>
+                
+                <p class="textoContenido">
+                    La mayoría de los algoritmos tratados buscan remover ruido gaussiano de una imagen a la que este fue aplicado, sin embargo, ¿Cómo agregar ruido gaussiano a una imagen? ¡Lo haremos a continuación!
+                </p>
+                
+                <p class="textoContenido">
+                    Para empezar, sube una imagen y observa cómo se ve tras agregarle <b>ruido gaussiano</b> varias veces
+                </p>
+                
+                <!-- Controles para carga de una imagen proveída por el usuario y a la cuál se le aplicará ruido gaussiano -->
+                <div class="contenedorMargenInferior">
+                    <input type="file" id="imagenSubida" class="inputFile"/>
+                </div>
+                
+                <div class="contenedorMargenInferior">
+                    <canvas id="imagenOriginal" />
+                </div>
+                
+                <button id="siguientePaso" class="inputButton">Siguiente paso</button>
+                
+                <div class="contenedorMargenInferior">
+                    <canvas id="imagenesTransformadas" />
+                </div>
+                
             </div>
                 
         </div>

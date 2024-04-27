@@ -267,7 +267,7 @@ de todas las páginas */
 }
 
 /* Estilo de botón dentro de cada enlace */
-.navegacion li a button {
+.navegacion li a button, .inputButton, .inputFile {
     padding: 5px;
     padding-left: 10px;
     padding-right: 10px;
@@ -450,6 +450,11 @@ y sombra de resalte, usado para ciertas imágenes */
 
 .tablaGeneral > div > div img:hover {
     border-radius: 0;
+}
+
+.input {
+    border: 1px solid #b11a21;
+    border-radius: 2px;
 }
 
 /* 
