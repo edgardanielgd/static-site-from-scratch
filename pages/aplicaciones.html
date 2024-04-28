@@ -15,7 +15,7 @@
     
     <!-- Importe de librerias a usar -->
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"> </script>
-    <script src="./../../scripts/script.js"> </script>
+    <script src="./../scripts/script.js"> </script>
 </head> 
 
 <body>
@@ -139,12 +139,19 @@
             <li>
                 <ul>
                     <li>
-                    <a href="aplicaciones.html#ejemplos" target="_self">
-                        <button>
-                            Ejemplos de uso
-                        </button>
-                    </a>
-                        </li>
+                        <a href="aplicaciones.html#ejemplos" target="_self">
+                            <button>
+                                Ejemplos de uso
+                            </button>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="aplicaciones.html#experimentaloTuMismo" target="_self">
+                            <button>
+                                Experimenta tu mismo
+                            </button>
+                        </a>
+                    </li>
                 </ul>
                 <a href="aplicaciones.html" target="_self">
                     <button>
@@ -364,7 +371,7 @@
             
             <div id="experimentaloTuMismo">
                 <h1 class="textoSubtituloContenido">
-                    ¡Prúebalo tu mismo!
+                    ¡Pruébalo tu mismo!
                 </h1>
                 
                 <p class="textoContenido">
@@ -376,25 +383,95 @@
                 </p>
                 
                 <!-- Controles para carga de una imagen proveída por el usuario y a la cuál se le aplicará ruido gaussiano -->
-                <div class="contenedorMargenInferior">
-                    <input type="file" id="imagenSubida" class="inputFile"/>
+                <div class="contenedorAdicionRuido">
+                    <div class="controles">
+                        <label class="actividadControl">
+                            <input type="file" id="imagenSubida" class="inputFile"/>
+                            Sube tu imagen aquí!
+                        </label> 
+                        <label class="actividadControl">
+                            <input type="button" id="siguientePaso"/>
+                            Agregar paso
+                        </label>
+                    </div>
+                    
+                    <div class="contenedorResponsivo" id="contenedorImagenes">
+                        <div class="contenedorCanvasImagen bordeSombra">
+                            <p class="textoContenido">
+                                Imagen Original
+                            </p>
+                            <canvas id="imagenOriginal"></canvas>
+                        </div>
+                        
+                        <div class="contenedorCanvasImagen bordeSombra" >
+                            <p class="textoContenido" id="parrafoPasoImagen"></p>
+                            <canvas id="imagenesTransformadas"> </canvas>
+                            <div class="contenedorResponsivo">
+                                <button id="navegarAnteriorPaso" class="botonNavegacionPaso">
+                                    &lt;
+                                </button>
+                                <div id="pasos" class="contenedorNavegacionPasos">
+                                </div>
+                                <button id="navegarSiguientePaso" class="botonNavegacionPaso">
+                                    &gt;
+                                </button>
+                            </div>
+                            
+                            
+                        </div>
+                        
+                    </div>
+                    
+                    
                 </div>
                 
-                <div class="contenedorMargenInferior">
-                    <canvas id="imagenOriginal" />
+                <p class="textoContenido">
+                    Un modelo de difusión es entrenado para, a partir de una imagen con varios pasos de <b>ruido aplicado</b> sea posible volver a la imagen original. En la práctica, el modelo no llegará a la misma imagen inicial sino a una totalmente nueva que recolecta <b>características condicionadas</b> por otros tipos de entrada, como <b>texto</b> u <b>otras imágenes</b>.
+                </p>
+                <p class="textoContenido">
+                    Así, inicialmente, lo único que se necesita aparte de la entrada del usuario es un conjunto de pixeles generados aleatoriamente a partir de una distribución aleatoria (en este caso gaussiana). En otras palabras, a partir de una <b>imagen caótica</b> sin ningún significado para su visualizador se encuentra otra <b>imagen "ordenada"</b> y con más sentido que se acomode al contexto deseado.
+                </p>
+                <p class="textoContenido">
+                    Finalmente, ¿Cómo se vería la imagen subida antes como un <b>vector latente</b>?
+                </p>
+                <p class="textoContenido">
+                    Para presentar lo anterior, se usará un pequeño ejemplo de <b>red neuronal</b> sin entrenamiento previo compuesta por las siguientes carpas ordenadas en un <b>modelo secuencial</b> (una capa después de la otra):
+                </p>
+                <div class="listaContenido">
+                    <p class="textoContenido contenedorMargenInferior">
+                        <b>Capa de escalamiento de imagen</b> : Se requiere conocer de antemano los tamaños de las imágenes de entrada. Sin embargo, dado que estas pueden variar su alto y ancho, se usa una capa que permita transformar una imagen a un tamaño estándar de <b>200x200</b> pixeles.
+                    </p>
+                    <p class="textoContenido contenedorMargenInferior">
+                        <b>Capa de convolución #1</b> : Durante el procesamiento de una imagen se suelen usar varias capas de <b>reducción de dimensionalidad</b>. Entre ellas, se encuentras las capas de convolución que, a partir de un filtro aprendido permiten reducir el tamaaño de la imagen (alto y ancho) además de aumentar el número de canales de ésta. <b>Número de filtros: 8</b>, es decir el número de canales tras la aplicación de esta capa. <b>Tamaño de kernel: 4x4</b>, es decir, el tamaño del filtro que se aplicará sobre la imagen de entrada. <b>Padding: 0x0</b>, no se tomarán margenes adicionales al filtrar la imagen. <b>Strides: 2x2</b>, cada 2 unidades (pixeles) de la imagen de entrada, se "colocará" el filtro sobre la imagen de entrada. <b>Activación: ReLu (Rectified Linear Unit)</b>, descartar valores negativos en salida (a los cuales se les asignará un cero).
+                    </p>
+                    <p class="textoContenido contenedorMargenInferior">
+                        <b>Capa de max pooling #1</b> : Al igual que las capas de convolución, se usan las capas de pooling (tanto Max como Average) para reducir la dimensionalidad de la entrada, sin embargo, en este caso solo se descartarán valores de la entrada sin realizar ningún cálculo adicionl. <b>Tamaño de filtro: 2x2</b>.
+                    </p>
+                    <p class="textoContenido contenedorMargenInferior">
+                        <b>Capa de convolución #2</b> : <b>Número de filtros: 16</b>. <b>Tamaño de kernel: 4x4</b>. <b>Padding: 0x0</b>. <b>Strides: 2x2</b>. <b>Activación: ReLu (Rectified Linear Unit)</b>.
+                    </p>
+                    <p class="textoContenido contenedorMargenInferior">
+                        <b>Capa de max pooling #2</b> : <b>Tamaño de filtro: 3x3</b>.
+                    </p>
+                    <p class="textoContenido contenedorMargenInferior">
+                        <b>Capa densa #1</b> : <b>Número de unidades: 64</b>. A través de esta capa se relaciona cada uno de los elementos de la imagen o resultado anterior con un punto de la salida, en este caso cada uno de las 64 unidades finales. <b>Activación: ReLu (Rectified Linear Unit)</b>.
+                    </p>
+                    <p class="textoContenido contenedorMargenInferior">
+                        <b>Capa densa #2</b> : <b>Número de unidades: 16</b>. Ésta es la última capa del modelo y la cual determinará la representación de la imagen en un vector de 16 unidades, siendo éste el vector latente.
+                        Cabe resaltar que en redes neuronales reales, esta ultima capa se encuentra conectada a otra red neuronal cuyo trabajo es reconstruir la imagen de entrada. En algunos casos, esta ultima red es estructuralmente una copia exacta de la inicial pero con sus capas en orden inverso y con capas de aumento de dimensionalidad como convoluciones transpuestas.
+                    </p>
                 </div>
                 
-                <button id="siguientePaso" class="inputButton">Siguiente paso</button>
-                
-                <div class="contenedorMargenInferior">
-                    <canvas id="imagenesTransformadas" />
-                </div>
-                
+                <label class="actividadControl">
+                    <input type="button" id="calcularVector"/>
+                    Calcular vector latente
+                </label>
+                <div id="resultadoCalculoVector"></div>
+                <p class="textoContenido">
+                    Como se puede observar, con estos 16 valores puede resumirse con cierto nivel de precisión las características principales de una imagen (o al menos aquellas relevantes para un modelo)
+                </p>
             </div>
-                
         </div>
-        
-        
     </div>
 
 </body>

@@ -21,6 +21,12 @@ a {
     word-break: break-word;
 }
 
+
+/* Estilos para objetos canvas */
+canvas {
+    margin: 20px;
+}
+
 /* Estilos de contenedores */
 
 /* Encabezado de la página */
@@ -105,6 +111,116 @@ es suficientemente grande. Cuando la pantalla es pequeña, los presenta en colum
 .contenedorMargenInferior {
     margin-top: 10px !important;
     margin-bottom: 10px !important;
+}
+
+/* Contenedor para controles de adición de ruido gaussiano a imagen */
+.contenedorAdicionRuido .controles {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.actividadControl input {
+    display: none;
+}
+
+.actividadControl {
+    padding: 10px;
+    margin: 10px;
+    
+    background-color: #b11a21;
+    
+    max-height: 50px;
+    width: 50%;
+    border: #b11a21 2px solid;
+    border-radius: 5px;
+
+    /* Cursor pointer permite que el mouse obtenga un 
+    símbolo de puntero  */
+    cursor: pointer;
+    
+    color: white;
+    text-align: center;
+    
+    /* Usar un tamaño de texto relativo para evitar que la navegación ocupe excesivo espacio*/
+    font-size: 14pt;
+}
+
+.actividadControl:hover {
+    background-color: white;
+    color: #b11a21;
+}
+
+.contenedorAdicionRuido .contenedorCanvasImagen {
+    width: 50%;
+    padding: 10px;
+    margin: 10px;
+}
+
+/* Estilos para controles de navegación entre pasos */
+.contenedorCanvasImagen .botonNavegacionPaso {
+    width: 10%;
+    height: 30px;
+    
+    margin-top: 5px;
+    margin-bottom: 5px;
+    
+    background-color: #b11a21;
+    color: white;
+    border: #b11a21 2px solid;
+    border-radius: 5px;
+}
+
+.contenedorCanvasImagen .botonNavegacionPaso:hover {
+    background-color: white;
+    color: #b11a21;
+}
+
+.contenedorCanvasImagen .contenedorNavegacionPasos {
+    display: flex;
+    
+    width: 80%;
+    height: 30px;
+    
+    margin-top: 5px;
+    margin-bottom: 5px;
+    
+    vertical-align: middle;
+}
+
+.contenedorCanvasImagen .contenedorNavegacionPasos p {
+    
+    width: 10px;
+    height: 10px;
+    
+    background-color: #b11a21;
+    border: #b11a21 1px solid;
+    border-radius: 10px;
+    
+    margin: auto;
+    cursor: pointer;
+}
+
+.contenedorCanvasImagen .contenedorNavegacionPasos p.actual {
+    background-color: white;
+}
+
+/* Contenedor de representación de vector latente de imagen */ 
+#resultadoCalculoVector {
+    display: grid;
+    
+    /* Mostrar elementos en 4 columnas */ 
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    
+    margin: 20px;
+    width: 100%;
+}
+
+#resultadoCalculoVector div {
+    text-align: center;
+    margin: auto;
 }
 
 /* Estilos de imágenes */
@@ -213,6 +329,8 @@ de todas las páginas */
 .textoContenido {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     text-align: justify;
+    padding-top: 10px;
+    padding-bottom: 10px;
     
     font-size: 16pt;
     margin: auto;
@@ -452,11 +570,6 @@ y sombra de resalte, usado para ciertas imágenes */
     border-radius: 0;
 }
 
-.input {
-    border: 1px solid #b11a21;
-    border-radius: 2px;
-}
-
 /* 
 + 
 * Estilos para tamaños de pantalla medianos y pequeños
@@ -483,6 +596,11 @@ y sombra de resalte, usado para ciertas imágenes */
     .navegacion li a button {
         /* Ajustar tamaño de texto en menú */
         font-size: 10pt;
+    }
+    
+    #resultadoCalculoVector {
+        /* Mostrar elementos en 3 columnas */
+        grid-template-columns: 1fr 1fr 1fr;
     }
 }
 
@@ -523,6 +641,7 @@ y sombra de resalte, usado para ciertas imágenes */
     .imagenParrafoIzquierda {
         margin-right: auto;
     }
+    
     .imagenParrafoDerecha {
         margin: auto;
     }
@@ -530,6 +649,31 @@ y sombra de resalte, usado para ciertas imágenes */
     /* Presenta elementos en columna cuando el tamaño de pantalla es pequeño */
     .contenedorResponsivo {
         flex-direction: column;
+    }
+    
+    .contenedorAdicionRuido .controles {
+        flex-direction: column;
+    }
+    
+    .actividadControl {
+        width: 100%;
+    }
+    
+    .contenedorAdicionRuido .contenedorCanvasImagen {
+        width: 100%;
+    }
+    
+    .contenedorCanvasImagen .botonNavegacionPaso {
+        width: 100%;
+    }
+    
+    .contenedorCanvasImagen .contenedorNavegacionPasos {
+        width: 100%;
+    }
+    
+    #resultadoCalculoVector {
+        /* Mostrar elementos en 2 columnas */
+        grid-template-columns: 1fr 1fr;
     }
     
     .tablaGeneral > div > div {
